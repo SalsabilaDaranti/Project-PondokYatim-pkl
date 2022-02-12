@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PengasuhController;
 use App\Http\Controllers\DonasiController;
 use App\Http\Controllers\AnakAsuhController;
+use App\Http\Controllers\KebutuhanController;
 
 
 /*
@@ -39,6 +40,8 @@ Route::group(['middleware' => 'auth'], function () {
 	Route::resource('pengasuh', PengasuhController::class);
 	Route::resource('donasi', DonasiController::class);
 	Route::resource('anakasuh', AnakAsuhController::class);
+	Route::resource('kebutuhan', KebutuhanController::class);
+	
 
 	Route::resource('user', 'App\Http\Controllers\UserController', ['except' => ['show']]);
 	Route::get('profile', ['as' => 'profile.edit', 'uses' => 'App\Http\Controllers\ProfileController@edit']);

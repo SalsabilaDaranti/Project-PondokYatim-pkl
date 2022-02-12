@@ -34,6 +34,13 @@
               <p>{{ __('donasi') }}</p>
               </a>
             </li>
+
+            <li class="nav-item{{ $activePage == 'kebutuhan' ? ' active' : '' }}">
+              <a class="nav-link" href="{{ route('kebutuhan.index') }}">
+              <i class="material-icons">person</i>
+              <p>{{ __('kebutuhan') }}</p>
+              </a>
+            </li>
       @endif
     </ul>
   </div>
